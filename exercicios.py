@@ -141,7 +141,23 @@
 # print(f'Nova String: {resultado}')
 
 
+#Calculadora
 
-    
+operation = input ('Qual operação você quer realizar?\n 1 - Adição\n 2 - Subtração\n 3 - Multiplicação\n 4 - Divisão\n')
+if 0 < operation < 5:
+    print('Digite um valor válido!')
 
+num1 = input('Digite o primeiro número: ')
+num2 = input('Digite o segundo número: ')
+valor = 0
 
+if operation == 1:
+    valor = num1 + num2
+elif operation == 2:
+    valor = num1 - num2
+elif operation == 3:
+    valor = num1 * num2
+else:
+    valor = num1 / num2
+
+print(valor)

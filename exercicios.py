@@ -143,21 +143,33 @@
 
 #Calculadora
 
-operation = input ('Qual operação você quer realizar?\n 1 - Adição\n 2 - Subtração\n 3 - Multiplicação\n 4 - Divisão\n')
-if 0 < operation < 5:
+operation = int(input ('Qual operação você quer realizar?\n 1 - Adição\n 2 - Subtração\n 3 - Multiplicação\n 4 - Divisão\n Operação:'))
+if operation < 0 or operation >= 5:
     print('Digite um valor válido!')
+    exit()
+try:
+    num1 = int(input('Digite o primeiro número: '))
+    num2 = int(input('Digite o segundo número: '))
+except ValueError:
+    print('Você precisa digitar um valor válido!')
+    exit()
 
-num1 = input('Digite o primeiro número: ')
-num2 = input('Digite o segundo número: ')
-valor = 0
+
 
 if operation == 1:
     valor = num1 + num2
+    print(f'o resultado é: {valor}')
 elif operation == 2:
     valor = num1 - num2
+    print(f'o resultado é: {valor}')
 elif operation == 3:
     valor = num1 * num2
-else:
-    valor = num1 / num2
+    print(f'o resultado é: {valor}')
+elif operation == 4:
+    if num1 == 0 or num2 == 0:
+        print('Não pode ser dividido um número por zero!')
+    else:
+        valor = num1 / num2
+        print(f'O resultado é: {valor}')
 
-print(valor)
+

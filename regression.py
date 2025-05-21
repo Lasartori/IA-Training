@@ -39,8 +39,11 @@ plt.close()
 sb.histplot(data=dados,x='degree_p')
 plt.close()
 
+#O campo salário mostra que existe uma grande discrepância
 sb.boxplot(x=dados['salary'])
 plt.close()
 
 sb.histplot(data=dados,x='salary')
-plt.show()
+plt.close()
+
+

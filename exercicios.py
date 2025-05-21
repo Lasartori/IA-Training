@@ -143,33 +143,83 @@
 
 #Calculadora
 
-operation = int(input ('Qual operação você quer realizar?\n 1 - Adição\n 2 - Subtração\n 3 - Multiplicação\n 4 - Divisão\n Operação:'))
-if operation < 0 or operation >= 5:
-    print('Digite um valor válido!')
-    exit()
-try:
-    num1 = int(input('Digite o primeiro número: '))
-    num2 = int(input('Digite o segundo número: '))
-except ValueError:
-    print('Você precisa digitar um valor válido!')
-    exit()
+# operation = int(input ('Qual operação você quer realizar?\n 1 - Adição\n 2 - Subtração\n 3 - Multiplicação\n 4 - Divisão\n Operação:'))
+# if operation < 0 or operation >= 5:
+#     print('Digite um valor válido!')
+#     exit()
+# try:
+#     num1 = int(input('Digite o primeiro número: '))
+#     num2 = int(input('Digite o segundo número: '))
+# except ValueError:
+#     print('Você precisa digitar um valor válido!')
+#     exit()
 
 
+
+# if operation == 1:
+#     valor = num1 + num2
+#     print(f'o resultado é: {valor}')
+# elif operation == 2:
+#     valor = num1 - num2
+#     print(f'o resultado é: {valor}')
+# elif operation == 3:
+#     valor = num1 * num2
+#     print(f'o resultado é: {valor}')
+# elif operation == 4:
+#     if num1 == 0 or num2 == 0:
+#         print('Não pode ser dividido um número por zero!')
+#     else:
+#         valor = num1 / num2
+#         print(f'O resultado é: {valor}')
+
+#Simulador de cara ou coroa
+# import random
+
+# moeda = random.randint(1,100)
+# print(moeda)
+
+# if moeda % 2 ==0:
+#     print('Cara!')
+# else :
+#     print('Coroa')
+
+#Conversor de medidas
+operation = int(input ('Qual operação você quer realizar?\n 1 - Conversor de unidades\n 2 - Conversor de moeda\n Digite um valor: '))
 
 if operation == 1:
-    valor = num1 + num2
-    print(f'o resultado é: {valor}')
-elif operation == 2:
-    valor = num1 - num2
-    print(f'o resultado é: {valor}')
-elif operation == 3:
-    valor = num1 * num2
-    print(f'o resultado é: {valor}')
-elif operation == 4:
-    if num1 == 0 or num2 == 0:
-        print('Não pode ser dividido um número por zero!')
+    unity = int(input('Qual conversão de unidade você deseja realizar?\n 1 - Metros para centímetros\n 2 - Quilos para Gramas\n 3 - Celsius para Fahrenheit\n Digite um valor:'))
+    if unity == 1:
+        val1 = int(input('Digite o valor em metros: '))
+        convert = val1 * 100
+        print(f'Valor em centímetros: {convert}')
+    elif unity == 2:
+        val2 = int(input('Digite o valor em quilos: '))
+        convert1 = val2 * 1000
+        print(f'Valor em gramas: {convert1}')
+    elif unity == 3:
+        val3 = int(input('Digite o valor em celsius: '))
+        convert3 = ((val3 * 9)/5) + 32
+        print(f'Valor em celsius: {convert3}')
     else:
-        valor = num1 / num2
-        print(f'O resultado é: {valor}')
+        exit()
+elif operation == 2:
+    unity1 = int(input('Para qual moeda o valor em reais deve ser convertido?\n 1 - Dolar\n 2 - Euro\n 3 - Iene\n Digite um valor:'))
+    if unity1 == 1:
+        val1 = int(input('Digite o valor em reais: '))
+        convert = val1 / 5.85
+        print(f'Dolares: {convert}')
+    elif unity1 == 2:
+        val2 = int(input('Digite o valor em reais: '))
+        convert1 = val2 / 6.34
+        print(f'Euros: {convert1}')
+    elif unity1 == 3:
+        val3 = int(input('Digite o valor em reais: '))
+        convert3 = val3 * 0.039
+        print(f'Ienes: {convert3}')
+    else:
+        print('Digite um valor válido!')
+else:
+    print('Digite um valor válido!')
+    exit()
 
 

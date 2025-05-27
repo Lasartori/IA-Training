@@ -184,42 +184,95 @@
 #     print('Coroa')
 
 #Conversor de medidas
-operation = int(input ('Qual operação você quer realizar?\n 1 - Conversor de unidades\n 2 - Conversor de moeda\n Digite um valor: '))
+# operation = int(input ('Qual operação você quer realizar?\n 1 - Conversor de unidades\n 2 - Conversor de moeda\n Digite um valor: '))
+
+# if operation == 1:
+#     unity = int(input('Qual conversão de unidade você deseja realizar?\n 1 - Metros para centímetros\n 2 - Quilos para Gramas\n 3 - Celsius para Fahrenheit\n Digite um valor:'))
+#     if unity == 1:
+#         val1 = int(input('Digite o valor em metros: '))
+#         convert = val1 * 100
+#         print(f'Valor em centímetros: {convert}')
+#     elif unity == 2:
+#         val2 = int(input('Digite o valor em quilos: '))
+#         convert1 = val2 * 1000
+#         print(f'Valor em gramas: {convert1}')
+#     elif unity == 3:
+#         val3 = int(input('Digite o valor em celsius: '))
+#         convert3 = ((val3 * 9)/5) + 32
+#         print(f'Valor em fahrenheit: {convert3}')
+#     else:
+#         exit()
+# elif operation == 2:
+#     unity1 = int(input('Para qual moeda o valor em reais deve ser convertido?\n 1 - Dolar\n 2 - Euro\n 3 - Iene\n Digite um valor:'))
+#     if unity1 == 1:
+#         val1 = int(input('Digite o valor em reais: '))
+#         convert = val1 / 5.85
+#         print(f'Dolares: {convert}')
+#     elif unity1 == 2:
+#         val2 = int(input('Digite o valor em reais: '))
+#         convert1 = val2 / 6.34
+#         print(f'Euros: {convert1}')
+#     elif unity1 == 3:
+#         val3 = int(input('Digite o valor em reais: '))
+#         convert3 = val3 * 0.039
+#         print(f'Ienes: {convert3}')
+#     else:
+#         print('Digite um valor válido!')
+# else:
+#     print('Digite um valor válido!')
+#     exit()
+
+# Jogo da adivinhação
+# import random
+
+# value = random.randint(1,5)
+# correct = False
+
+# while not correct:
+#     answer = int(input('Try to find the random number!: '))
+#     if answer == value:
+#         correct = True
+#         print('Congratulations, you made it!')
+#     else:
+#         if answer < value:
+#             print('The number is higher than that!')
+#         else:
+#             print('The number is lower than that!')
+#     print('Try again!')
+
+#Restaurant Reservation System
+print('Welcome to the restaurant reservation system!')
+print(' 1 - Make a reservation\n 2 - Consult reservations\n 3 - Exit')
+
+def make_reservation():
+    name = input('Enter your name: ')
+    date = input('Enter the reservation date (DD/MM/YYYY): ')
+    time = input('Enter the reservation time (HH:MM): ')
+    guests = int(input('Enter the number of guests: '))
+    
+    print(f'Reservation confirmed for {name} on {date} at {time} for {guests} guests.')
+
+
+operation = int(input('Choose an option: '))
+if operation < 1 or operation > 3:
+    print('Please choose a valid option!')
+    exit()
 
 if operation == 1:
-    unity = int(input('Qual conversão de unidade você deseja realizar?\n 1 - Metros para centímetros\n 2 - Quilos para Gramas\n 3 - Celsius para Fahrenheit\n Digite um valor:'))
-    if unity == 1:
-        val1 = int(input('Digite o valor em metros: '))
-        convert = val1 * 100
-        print(f'Valor em centímetros: {convert}')
-    elif unity == 2:
-        val2 = int(input('Digite o valor em quilos: '))
-        convert1 = val2 * 1000
-        print(f'Valor em gramas: {convert1}')
-    elif unity == 3:
-        val3 = int(input('Digite o valor em celsius: '))
-        convert3 = ((val3 * 9)/5) + 32
-        print(f'Valor em celsius: {convert3}')
-    else:
-        exit()
+    make_reservation()
 elif operation == 2:
-    unity1 = int(input('Para qual moeda o valor em reais deve ser convertido?\n 1 - Dolar\n 2 - Euro\n 3 - Iene\n Digite um valor:'))
-    if unity1 == 1:
-        val1 = int(input('Digite o valor em reais: '))
-        convert = val1 / 5.85
-        print(f'Dolares: {convert}')
-    elif unity1 == 2:
-        val2 = int(input('Digite o valor em reais: '))
-        convert1 = val2 / 6.34
-        print(f'Euros: {convert1}')
-    elif unity1 == 3:
-        val3 = int(input('Digite o valor em reais: '))
-        convert3 = val3 * 0.039
-        print(f'Ienes: {convert3}')
-    else:
-        print('Digite um valor válido!')
-else:
-    print('Digite um valor válido!')
+    print('Consulting reservations...')
+    # Here you would typically query a database or a list of reservations
+elif operation == 3:
+    print('Exiting the reservation system. Thank you!')
     exit()
+else:
+    print('Invalid option selected. Please try again.')
+    exit()
+
+
+
+
+
 
 
